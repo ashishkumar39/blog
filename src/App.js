@@ -25,33 +25,33 @@ function App() {
   return (
     <Router>
       <Navigation />
-      <Row>
-        <Col md="2"><Sidebar /></Col>
-        <Col md="2"></Col>
-        <Col md="6" className="mb-5">
-          <Switch>
-            <Route path="/blogs/dependency-injection">
-              <DependencyInjection />
-            </Route>
-            <Route path="/blogs/hibernate">
-              <Hibernate />
-            </Route>
-            <Route path="/blogs/strategy-pattern">
-              <StrategyPattern />
-            </Route>
-            <Route path="/blogs/factory-pattern">
-              <FactoryPattern />
-            </Route>
-            <Route path="/" exact>
-              {/* <Home /> */}
-              <Redirect to="/blogs/dependency-injection" />
-            </Route>
-            <Route>
-              <ErrorPage />
-            </Route>
-          </Switch>
-        </Col>
-      </Row>
+        <div className="d-flex">
+          <Col md="2" className="d-none d-sm-none d-md-block d-lg-block"><Sidebar /></Col>
+          <Col md="2" lg="2" className="d-sm-none d-md-block"></Col>
+          <Col md="6" lg="6" sm="" xs="12" className="mb-5">
+            <Switch>
+              <Route path="/blogs/dependency-injection">
+                <DependencyInjection />
+              </Route>
+              <Route path="/blogs/hibernate">
+                <Hibernate />
+              </Route>
+              <Route path="/blogs/strategy-pattern">
+                <StrategyPattern />
+              </Route>
+              <Route path="/blogs/factory-pattern">
+                <FactoryPattern />
+              </Route>
+              <Route path="/" exact>
+                {/* <Home /> */}
+                <Redirect to="/blogs/dependency-injection" />
+              </Route>
+              <Route>
+                <ErrorPage />
+              </Route>
+            </Switch>
+          </Col>
+        </div>
       <Footer />
     </Router>
   );

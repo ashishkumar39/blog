@@ -53,7 +53,7 @@ class DependencyInjection extends Component {
 
     render() {
         return (
-            <div className="d-flex">
+            <div className="">
                 {/* <div className="px-2 mx-2 d-flex flex-column align-items-center justify-content-center">
                     <BlogLike onClick={this.toggleLikeButton} like={this.state.like} />
                     <BlogComment />
@@ -85,7 +85,8 @@ class DependencyInjection extends Component {
                     <BlogSection>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis at eveniet temporibus error ex libero blanditiis illum non fuga deserunt. Vero voluptate voluptatem corporis fugiat soluta aliquam laborum quam nulla. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis at eveniet temporibus error ex libero blanditiis illum non fuga deserunt. Vero voluptate voluptatem corporis fugiat soluta aliquam laborum quam nulla. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis at eveniet temporibus error ex libero blanditiis illum non fuga deserunt. Vero voluptate voluptatem corporis fugiat soluta aliquam laborum quam nulla.
                     </BlogSection>
-                    <Image src={ process.env.PUBLIC_URL + "/dependency-injection.jpeg" } />
+                    {/* <Image src={ process.env.PUBLIC_URL + "/dependency-injection.jpeg" } /> */}
+                    <img src={ process.env.PUBLIC_URL + "/dependency-injection.jpeg" } class="img-fluid" alt="Responsive image"></img>
                     <BlogSection>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis at eveniet temporibus error ex libero blanditiis illum non fuga deserunt. Vero voluptate voluptatem corporis fugiat soluta aliquam laborum quam nulla. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis at eveniet temporibus error ex libero blanditiis illum non fuga deserunt. Vero voluptate voluptatem corporis fugiat soluta aliquam laborum quam nulla. Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </BlogSection>
