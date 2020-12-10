@@ -18,6 +18,7 @@ import Hibernate from './pages/blogs/Hibernate';
 import FactoryPattern from './pages/blogs/FactoryPattern';
 import StrategyPattern from './pages/blogs/StrategyPattern';
 import ErrorPage from './pages/ErrorPage';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
       <Row>
         <Col md="2"><Sidebar /></Col>
         <Col md="2"></Col>
-        <Col md="6">
+        <Col md="6" className="mb-5">
           <Switch>
             <Route path="/blogs/dependency-injection">
               <DependencyInjection />
@@ -49,6 +50,7 @@ function App() {
           </Switch>
         </Col>
       </Row>
+      <Footer />
     </Router>
   );
 }

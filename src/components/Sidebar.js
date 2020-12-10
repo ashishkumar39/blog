@@ -12,6 +12,10 @@ class Sidebar extends Component {
             { url: "dependency-injection", name: "Dependency Injection" },
             { url: "hibernate", name: "Hibernate" },
             { url: "strategy-pattern", name: "Strategy Pattern" },
+            { url: "factory-pattern", name: "Factory Pattern" },
+            { url: "factory-pattern", name: "Factory Pattern" },
+            { url: "factory-pattern", name: "Factory Pattern" },
+            { url: "factory-pattern", name: "Factory Pattern" },
             { url: "factory-pattern", name: "Factory Pattern" }
         ]
     }
@@ -24,8 +28,7 @@ class Sidebar extends Component {
                     <Card.Body>
                         <Card.Title>Ashish</Card.Title>
                         <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
+                        Things I find interesting :)
                         </Card.Text>
                     </Card.Body>
                 </Card>

@@ -5,7 +5,11 @@ import BlogTitle from '../../components/BlogTitle';
 import BlogSubTitle from '../../components/BlogSubTitle';
 import BlogDate from '../../components/BlogDate';
 import BlogLike from '../../components/BlogLike';
-import { Col, Row } from 'react-bootstrap';
+import BlogShare from '../../components/BlogShare';
+import { Col, Image, Row } from 'react-bootstrap';
+import Gist from 'react-gist';
+import BlogComment from '../../components/BlogComment';
+import BlogTag from '../../components/BlogTag';
 
 class DependencyInjection extends Component {
 
@@ -25,26 +29,33 @@ class DependencyInjection extends Component {
             show: false,
             counter: 0
         },
-        counter: 0
+        tags: [ "Java", "Spring" ]
     }
 
     showLike = () => {
-        if(this.state.like.show === false) {
-            this.setState({ like: { show: true, counter: this.state.like.counter + 1 } });
-        }
+        if(this.state.like.show === false) this.setState({ like: { show: true, counter: this.state.like.counter + 1 } });
+        else this.setState({ like: { show: false, counter: this.state.like.counter - 1 } });
     }
 
     render() {
         return (
-            <>
-                <BlogTitle title="Dependency Injection" />
-                <BlogSubTitle subtitle="Dependecy Injection from absolute basics" />
-                <div className="d-flex justify-content-between">
-                    <BlogDate date="10-Dec-2020" />
+            <div className="d-flex">
+                <div className="px-2 mx-2 d-flex flex-column align-items-center justify-content-center">
                     <BlogLike onClick={this.showLike} like={this.state.like} />
+                    <BlogComment />
+                    <BlogShare />
                 </div>
-            { this.state.content.map(c => <BlogSection section={c.p1} />) }
-            </>
+                <div>
+                    <BlogTitle title="Dependency Injection" />
+                    <BlogSubTitle subtitle="Dependecy Injection from absolute basics" />
+                    <BlogDate date="10-Dec-2020" />
+                    <Image src={ process.env.PUBLIC_URL + "/dependency-injection.jpeg" } />
+                    { this.state.content.map(c => <BlogSection section={c.p1} />) }
+                    { <script src="https://gist.github.com/sb0321/97b893145fee826c206678d22c9b9710.js"></script> }
+                    <Gist id="97b893145fee826c206678d22c9b9710" />
+                    <Row>{ this.state.tags.map(t => <Col><BlogTag tag={t} /></Col>) }</Row>
+                </div>
+            </div>
         );
     }
 }
