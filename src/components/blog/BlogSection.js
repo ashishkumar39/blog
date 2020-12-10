@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 class BlogSection extends Component {
     render() {
         return (
-            <p className="">{ this.props.section }</p>
+            <p className="">{ this.props.children }</p>
         );
     }
 }

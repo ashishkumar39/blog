@@ -7,18 +7,11 @@ class BlogTag extends Component {
     render() {
 
         const style = {
-            cursor: "pointer",
-            empty: {
-
-            },
-            filled: {
-                // fill: "#FFFFFF"
-            }
+            cursor: "pointer"
         };
 
         return (
-            // <Alert variant="secondary">{this.props.tag}</Alert>
-            <Badge variant="secondary">{this.props.tag}</Badge>
+            <Button variant="secondary" size="sm" className="mr-2">{this.props.tag}</Button>
         );
     }
 }
