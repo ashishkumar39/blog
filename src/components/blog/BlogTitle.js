@@ -1,10 +1,15 @@
 import { Component } from 'react';
-import Button from 'react-bootstrap/Button';
 
 class BlogTitle extends Component {
+
+    style = {
+        fontSize: "7vw",
+        fontWeight: "light"
+    }
+
     render() {
         return (
-            <h1 className="display-1 text-center">{ this.props.title }</h1>
+            <h1 style={this.style} className="font-weight-light text-center">{ this.props.title }</h1>
         );
     }
 }
