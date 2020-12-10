@@ -10,13 +10,13 @@ class Sidebar extends Component {
     state = {
         links: [
             { url: "dependency-injection", name: "Dependency Injection" },
-            { url: "hibernate", name: "Hibernate" },
-            { url: "strategy-pattern", name: "Strategy Pattern" },
-            { url: "factory-pattern", name: "Factory Pattern" },
-            { url: "factory-pattern", name: "Factory Pattern" },
-            { url: "factory-pattern", name: "Factory Pattern" },
-            { url: "factory-pattern", name: "Factory Pattern" },
-            { url: "factory-pattern", name: "Factory Pattern" }
+            // { url: "hibernate", name: "Hibernate" },
+            // { url: "strategy-pattern", name: "Strategy Pattern" },
+            // { url: "factory-pattern", name: "Factory Pattern" },
+            // { url: "factory-pattern", name: "Factory Pattern" },
+            // { url: "factory-pattern", name: "Factory Pattern" },
+            // { url: "factory-pattern", name: "Factory Pattern" },
+            // { url: "factory-pattern", name: "Factory Pattern" }
         ]
     }
 
@@ -33,7 +33,7 @@ class Sidebar extends Component {
                     </Card.Body>
                 </Card>
                 <ListGroup>
-                    <NavLink to="/"><ListGroup.Item>Home</ListGroup.Item></NavLink>
+                    {/* <NavLink to="/"><ListGroup.Item>Home</ListGroup.Item></NavLink> */}
                     { this.state.links.map(link => <NavLink to={ "/blogs/" + link.url }><ListGroup.Item>{ link.name }</ListGroup.Item></NavLink>) }
                 </ListGroup>
             </>

@@ -11,7 +11,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  Redirect
 } from "react-router-dom";
 import DependencyInjection from './pages/blogs/DependecyInjection';
 import Hibernate from './pages/blogs/Hibernate';
@@ -42,7 +43,8 @@ function App() {
               <FactoryPattern />
             </Route>
             <Route path="/" exact>
-              <Home />
+              {/* <Home /> */}
+              <Redirect to="/blogs/dependency-injection" />
             </Route>
             <Route>
               <ErrorPage />
