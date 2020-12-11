@@ -44,6 +44,10 @@ function App() {
               <Route path="/blogs/factory-pattern">
                 <FactoryPattern />
               </Route>
+              <Route path="/blogs" exact>
+                {/* <Home /> */}
+                <Redirect to="/blogs/dependency-injection" />
+              </Route>
               <Route path="/" exact>
                 {/* <Home /> */}
                 <Redirect to="/blogs/dependency-injection" />
