@@ -29,7 +29,7 @@ function App() {
           <Col md="3" lg="2" className="d-none d-sm-none d-md-block d-lg-block">
             <Sidebar />
           </Col>
-          <Col md="1" lg="2" className="d-sm-none d-md-block"></Col>
+          <Col md="1" lg="2" className="d-none d-sm-none d-md-block"></Col>
           <Col md="7" lg="6" sm="" xs="12" className="mb-5">
             <Switch>
               <Route path="/blogs/dependency-injection">
