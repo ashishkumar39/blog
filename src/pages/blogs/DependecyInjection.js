@@ -111,6 +111,7 @@ class DependencyInjection extends Component {
                         <Gist id="650a6b00cc33ed101f7b0e76aa724151" />
                         <p>Output -</p>
                         <p><img src={ process.env.PUBLIC_URL + "/dependency-injection-output1.png" } class="img-fluid" alt="Responsive image"></img></p>
+                        <p>This is also called <mark><Link>Constructor Injection</Link></mark> since we are injecting the objects through the constructor. Similarly if we inject the objects using <mark><Link>Setter Injection</Link></mark> in which we use the setter methods to inject the dependencies. These are the 2 types of the Dependency Injection.</p>
                         <p>So here we injected the <code>Points</code> to the <code>Triangle</code> object and that's it! This is dependency injection :D There are some frameworks which takes this to another level by automatically providing all the dependency on it's own. For example, <mark><Link>Spring Framework</Link></mark> uses <mark><Link>Inversion of Control</Link></mark> which handles the injection of the dependencies so that you only have to create any objects at all in your application!</p>
                         <p>Checkout my <mark><Link>Dependency Injection in Spring Framework</Link></mark> article!</p>
                     </BlogSection>
